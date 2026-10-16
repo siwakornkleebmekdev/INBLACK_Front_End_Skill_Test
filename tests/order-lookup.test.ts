@@ -1,0 +1,10 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {ORDERS, matchOrders, looksLikeOrderId} from '../src/lib/order-lookup.ts';
+test('empty input returns every fixture',()=>assert.equal(matchOrders(ORDERS,' ').length,5));
+test('order number supports case, spacing and dash',()=>{for(const q of ['ORD-1024','ord1024','ord 1024','1024'])assert.deepEqual(matchOrders(ORDERS,q).map(o=>o.id),['ORD-1024']);});
+test('game searches are case insensitive',()=>assert.equal(matchOrders(ORDERS,'rObLoX').length,2));
+test('Thai query does not accidentally match every ID',()=>{assert.equal(matchOrders(ORDERS,'เพชร').length,1);assert.equal(matchOrders(ORDERS,'ไม่พบ').length,0);});
+test('punctuation and unknown numbers return no results',()=>{assert.equal(matchOrders(ORDERS,'!!!').length,0);assert.equal(matchOrders(ORDERS,'ORD-9999').length,0);});
+test('partial ID formats remain valid',()=>{for(const q of ['ORD','ORD-','ord 1024','1024'])assert.ok(looksLikeOrderId(q));assert.equal(looksLikeOrderId('???'),false);});
+test('status-filtered collections keep their scope',()=>assert.equal(matchOrders(ORDERS.filter(o=>o.status==='done'),'Roblox').length,1));

@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function NotFound(){return <main className="mx-auto max-w-xl px-6 py-24 text-center"><p className="text-6xl font-bold text-primary">404</p><h1 className="mt-6 text-2xl font-bold">ไม่พบหน้าหรือออเดอร์นี้</h1><p className="my-4 text-muted-foreground">ตรวจสอบหมายเลขออเดอร์แล้วลองอีกครั้ง</p><Link href="/" className="text-primary underline">กลับไปติดตามออเดอร์</Link></main>}
