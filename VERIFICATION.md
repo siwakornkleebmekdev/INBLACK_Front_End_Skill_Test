@@ -23,3 +23,14 @@
 - Production build และ TypeScript ผ่าน
 - ไม่สามารถเปิด browser preview รอบนี้ได้ เนื่องจาก browser เชื่อมต่อ local server ไม่สำเร็จ
 
+
+## ปรับตาม Figma Foundations (12:2)
+- ติดตั้ง Prompt 400/500/600/700 และ Press Start 2P 400 ผ่าน Fontsource สำเร็จ
+- ปรับ Light semantic colors ทั้ง 38 ค่า และเงา XS/SM/LG ตาม Figma
+- Production build และ TypeScript ผ่าน
+- Browser desktop: header 64px, main 672px, content 624px, search padding 32px; title 30/36, logo 16/24, order ID 12/16
+- Browser mobile 390px: padding 16px, search padding 20px, title 24/32, การ์ดแนวตั้ง ไม่ล้นแนวนอน
+- ตรวจว่า Prompt และ Press Start 2P โหลดจริง ไม่พบ console error
+- ไม่มี static image/SVG assets ในเฟรมอ้างอิง และไม่มี Code Connect mappings ที่ส่งกลับ
+- ยังเทียบหน้าจอเต็ม 1:1 ไม่ได้ เพราะ Figma ที่เข้าถึงได้มีเฉพาะหน้า Foundations
+

@@ -164,7 +164,7 @@ export default function OrderTracker() {
       <header className="sticky top-0 z-20 bg-primary text-primary-foreground">
         <div className="mx-auto flex h-16 max-w-6xl items-center gap-3 px-4 sm:px-6">
           <a href="/" className="flex flex-col leading-none">
-            <span className="font-pixel text-sm sm:text-base">INBLACKM</span>
+            <span className="font-pixel text-sm leading-6 sm:text-base">INBLACKM</span>
             <span className="mt-1 text-[9px] tracking-[0.2em] opacity-80">
               GAMING STORE
             </span>
@@ -228,7 +228,7 @@ export default function OrderTracker() {
       {/* ── Main ───────────────────────────────────────────────── */}
       <main className="mx-auto w-full max-w-2xl flex-1 px-4 py-10 sm:px-6 sm:py-14">
         <section className="flex flex-col items-center text-center">
-          <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
+          <h1 className="text-2xl font-bold sm:text-3xl">
             ติดตามออเดอร์
           </h1>
           <p className="mt-2 text-sm text-muted-foreground sm:text-base">
@@ -299,7 +299,7 @@ export default function OrderTracker() {
                             i === active ? "bg-accent" : ""
                           }`}
                         >
-                          <span className="font-pixel text-[11px]">
+                          <span className="font-pixel text-xs leading-4">
                             {o.id}
                           </span>
                           <span className="min-w-0 flex-1 truncate text-muted-foreground">
@@ -375,7 +375,7 @@ export default function OrderTracker() {
                     <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                       <div className="min-w-0">
                         <div className="flex items-center gap-2">
-                          <span className="font-pixel text-[11px] sm:text-xs">
+                          <span className="font-pixel text-xs leading-4">
                             {order.id}
                           </span>
                           <button
